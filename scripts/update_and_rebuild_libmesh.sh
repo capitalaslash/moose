@@ -13,7 +13,7 @@ else
   cd - >/dev/null # Make this quiet
 fi
 
-export METHODS=${METHODS:="opt oprof dbg"}
+export METHODS=${METHODS:="opt dbg"}
 
 cd $SCRIPT_DIR/..
 
