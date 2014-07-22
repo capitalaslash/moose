@@ -213,7 +213,7 @@ class InputFileWidget(QtGui.QWidget):
 
 
   def click_open(self):
-    file_name = QtGui.QFileDialog.getOpenFileName(self, "Open Input File", "~/", "Input Files (*.i)")
+    file_name = QtGui.QFileDialog.getOpenFileName(self, "Open Input File", QtCore.QDir.currentPath(), "Input Files (*.i)")
 
     if isinstance(file_name, QtCore.QString):
         file_name = str(file_name)
