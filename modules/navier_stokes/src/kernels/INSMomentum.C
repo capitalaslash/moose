@@ -109,9 +109,9 @@ Real INSMomentum::computeQpResidual()
   // Body force term.  For truly incompressible flow, this term is constant, and
   // since it is proportional to g, can be written as the gradient of some scalar
   // and absorbed into the pressure definition.
-  // Real body_force_part = - _rho * _gravity(_component);
+  Real body_force_part = - _rho * _gravity(_component);
 
-  return convective_part + pressure_part + viscous_part /*+ body_force_part*/;
+  return convective_part + pressure_part + viscous_part + body_force_part;
 }
 
 
