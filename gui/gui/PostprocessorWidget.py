@@ -243,7 +243,7 @@ class PostprocessorWidget(QtGui.QWidget):
     '''
     open a new csv file, clean and rebuild Postprocessor list
     '''
-    file_name = QtGui.QFileDialog.getOpenFileName(self, "Open CSV File", "~/", "CSV Files (*.csv)")
+    file_name = QtGui.QFileDialog.getOpenFileName(self, "Open CSV File", QtCore.QDir.currentPath(), "CSV Files (*.csv)")
 
     if isinstance(file_name, QtCore.QString):
         file_name = str(file_name)
