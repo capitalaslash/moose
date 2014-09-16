@@ -14,6 +14,9 @@ except ImportError:
         raise ImportError("Cannot load either PyQt or PySide")
 
 import numpy, csv
+
+from matplotlib import use
+use("Qt4Agg")
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
