@@ -56,8 +56,11 @@ cd build
              --disable-warnings \
              --disable-cxx11 \
              --enable-unique-ptr \
+             --with-hdf5=/opt/hdf5-1.8.13 \
+             --with-vtk-include=/usr/include/vtk-6.1 \
+             --with-vtk-lib=/usr/lib/vtk-6.1 \
              --enable-openmp \
-             $DISABLE_TIMESTAMPS $*
+            $DISABLE_TIMESTAMPS $*
 
 # let LIBMESH_JOBS be either MOOSE_JOBS, or 1 if MOOSE_JOBS
 # is not set (not using our package). Make will then build
