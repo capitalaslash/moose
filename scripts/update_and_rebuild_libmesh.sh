@@ -59,6 +59,7 @@ cd build
              --with-hdf5=/opt/hdf5-1.8.13 \
              --with-vtk-include=/usr/include/vtk-6.1 \
              --with-vtk-lib=/usr/lib/vtk-6.1 \
+             --disable-trilinos \
              --enable-openmp \
             $DISABLE_TIMESTAMPS $*
 
