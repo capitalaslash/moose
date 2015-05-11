@@ -69,7 +69,7 @@ cd build
 LIBMESH_JOBS=${MOOSE_JOBS:-1}
 
 if [ -z "${MOOSE_MAKE}" ]; then
-  make -j ${JOBS:-$LIBMESH_JOBS} && \
+  make -j ${JOBS:-$LIBMESH_JOBS} LDFLAGS=-lbz2 && \
     make install
 else
   ${MOOSE_MAKE} && \
